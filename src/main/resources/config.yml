@@ -1,0 +1,4 @@
+payOs:
+  endpoint: https://api-merchant.payos.vn/v2/payment-requests
+  clientId: e7d74972-d7d4-466e-81b2-74765d555334
+  apiKey: cf8ef373-05dc-486c-a015-f4cac57a99b0

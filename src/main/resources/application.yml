@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: trial-swift-bill-sb
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/trialswiftbill?createDatabaseIfNotExist=true
+    username: root
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  sql:
+    init:
+      mode: always
+
+  flyway:
+    enabled: false
+    locations: classpath:db/migration
+    default-schema: trialswiftbill
+    baseline-on-migrate: true
+
+  config:
+    import:
+      - "config.yml"
+
+app:
+  request-prefix: /api/v1
