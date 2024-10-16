@@ -27,13 +27,21 @@ public interface CashierServices {
 	 */
 	Response<PaymentCreationResponse> requestPayment(PaymentRequestDetail paymentRequestDetail);
 
-//	/**
-//	 * Create and persist bill after purchase
-//	 *
-//	 * @param billInfoResponse
-//	 * @return
-//	 */
-//	Response<Void> createBill(BillInfoResponse billInfoResponse);
+	/**
+	 * Cancel pending payment
+	 *
+	 * @param orderCode order code returned by payos after create new payment request
+	 * @return {@link String}
+	 */
+	Response<String> cancelPayment(int orderCode);
+
+	/**
+	 * Create and persist bill after purchase
+	 *
+	 * @param billInfoResponse
+	 * @return
+	 */
+	Response<Void> createBill(BillInfoResponse billInfoResponse);
 
 	/**
 	 * Get product information by barcode
@@ -61,5 +69,5 @@ public interface CashierServices {
 	 */
 	Response<BillDetailResponse> getBillDetail(Long billId);
 
-	
+
 }

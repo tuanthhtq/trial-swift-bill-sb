@@ -37,4 +37,8 @@ public class Images {
 		this.url = url;
 		this.product = product;
 	}
+
+	public Images(String url) {
+		this.url = url;
+	}
 }

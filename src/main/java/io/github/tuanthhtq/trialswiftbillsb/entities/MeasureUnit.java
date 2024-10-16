@@ -22,7 +22,7 @@ public class MeasureUnit {
 	@Column(name = "measure_unit")
 	private Long id;
 
-	@Column(name = "measure_unit_name")
+	@Column(name = "measure_unit_name", unique = true)
 	private String name;
 
 	@OneToMany(
@@ -30,4 +30,8 @@ public class MeasureUnit {
 			fetch = FetchType.LAZY
 	)
 	private Set<Products> products;
+
+	public MeasureUnit(String name) {
+		this.name = name;
+	}
 }

@@ -44,7 +44,6 @@ public class Products {
 	@JoinColumn(name = "measure_unit_id")
 	private MeasureUnit measureUnit;
 
-	@Column(nullable = false)
 	private String barcode;
 
 	private boolean isActive = true;
@@ -84,5 +83,28 @@ public class Products {
 		this.stock = stock;
 		this.measureUnit = measureUnit;
 		this.barcode = barcode;
+	}
+
+	public Products(String name, String description, float price, float costPrice, float stock, MeasureUnit measureUnit) {
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.costPrice = costPrice;
+		this.stock = stock;
+		this.measureUnit = measureUnit;
+	}
+
+	public Products(String name, String description, float price, float costPrice, float stock, MeasureUnit measureUnit, String barcode, ProductCategories category, Suppliers supplier, Set<Images> images, ProductBrands brand) {
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.costPrice = costPrice;
+		this.stock = stock;
+		this.measureUnit = measureUnit;
+		this.barcode = barcode;
+		this.category = category;
+		this.supplier = supplier;
+		this.images = images;
+		this.brand = brand;
 	}
 }
