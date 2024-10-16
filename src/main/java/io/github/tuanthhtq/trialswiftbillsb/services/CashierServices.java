@@ -35,13 +35,6 @@ public interface CashierServices {
 	 */
 	Response<String> cancelPayment(int orderCode);
 
-	/**
-	 * Create and persist bill after purchase
-	 *
-	 * @param billInfoResponse
-	 * @return
-	 */
-	Response<Void> createBill(BillInfoResponse billInfoResponse);
 
 	/**
 	 * Get product information by barcode
